@@ -1,0 +1,7 @@
+$baseOrange:#b18145 !default;
+$baseRed:#e8102a !default;
+$gray:#bbb !default;
+// pixels to rems
+@function pxToRem($px) {
+    @return $px / 20 * 1rem;
+}
