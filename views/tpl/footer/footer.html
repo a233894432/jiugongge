@@ -1,0 +1,11 @@
+<!--
+    @require footer.js
+-->
+<div id="footer" v-cloak>
+    <div class="g-footer" v-if="isShowFooter">
+        <p>吸烟有害健康 请勿在禁烟场所吸烟</p>
+        <p>18岁以下未成年及非本公司产品消费者谢绝访问</p>
+        <p v-if="kfCustom != null">{{kfCustom}}</p>
+        <p v-else><a v-bind:href="tel|strTotel">客服电话：{{tel}}</a></p>
+    </div>
+</div>

@@ -1,0 +1,23 @@
+/**
+ * Created 2017-3-29 11:33:00
+ */
+
+@import "../../../components/common/base";
+.g-footer {
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    text-align: center;
+    background: #eee;
+    padding-top: pxToRem(4);
+    padding-bottom: pxToRem(4);
+    p {
+        font-size: pxToRem(10);
+    }
+}
+
+@media screen and (max-height:480px) {
+    .g-footer {
+        position: static
+    }
+}
