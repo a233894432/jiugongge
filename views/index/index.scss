@@ -9,5 +9,65 @@
 
 .g-main {
     background: #ede;
-    min-height: 100%;
+    height: inherit;
+}
+
+.g-con {
+    margin: 0 auto;
+    padding: 0 0.5rem
+}
+
+// top roll div
+.m-tipRollDiv {
+    max-height: 1rem;
+    line-height: 1rem;
+    font-size: 0.5rem;
+    display: block;
+    overflow: hidden;
+    background: rgba(0, 0, 0, 0.3);
+    img {
+        width: pxToRem(14);
+        display: inline-block;
+        vertical-align: text-bottom;
+        margin-right: pxToRem(4);
+    }
+    //向左滚动
+    .m-ScrollAround {
+        width: 70%;
+        text-align: left;
+        overflow: hidden;
+        float: left;
+        .u-left {
+            width: 10%;
+        }
+        .u-right {
+            width: 90%;
+        }
+        ul {
+            // width: 90%;
+            overflow: hidden;
+            white-space: nowrap;
+            li {
+                display: inline-block;
+                width: 100%;
+            }
+        }
+    }
+    //向上滚动
+    .m-ScrollUp {
+        width: 30%;
+        height: 1rem;
+        float: right;
+        overflow: hidden;
+        text-align: right;
+        ul {
+            // width: 90%;
+            // overflow: hidden;
+            // white-space: nowrap;
+            li {
+                display: inline-block;
+                width: 100%;
+            }
+        }
+    }
 }

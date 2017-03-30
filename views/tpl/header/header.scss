@@ -5,5 +5,7 @@
 @import "../../../components/common/base";
 html,
 body {
+    margin: 0;
     height: 100%;
+    -webkit-text-size-adjust: none
 }

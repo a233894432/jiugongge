@@ -2,7 +2,7 @@
     @require footer.js
 -->
 <div id="footer" v-cloak>
-    <div class="g-footer" v-if="isShowFooter">
+    <div class="g-footer" v-if="isShowFooter" :style="[{background:backgroundStyle},{color:fontColor}]">
         <p>吸烟有害健康 请勿在禁烟场所吸烟</p>
         <p>18岁以下未成年及非本公司产品消费者谢绝访问</p>
         <p v-if="kfCustom != null">{{kfCustom}}</p>
