@@ -5,8 +5,7 @@ fis.th({
         $: "lib/zepto/zepto.min.js",
         vue: "lib/vue/vue.2.13.js",
         dial: 'components/widget/dial.js',
-        mock: 'lib/mock/mock',
-        dMarquee: 'lib/dio/dMarquee'
+        mock: 'lib/mock/mock'
     },
     shim: {
         /* 'weui': {//配置第三方组件的依赖

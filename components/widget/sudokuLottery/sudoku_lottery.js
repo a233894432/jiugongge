@@ -105,20 +105,25 @@ let lottery = {
             _this.play();
         })
 
-        if (lottery.times > lottery.cycle + 10 && lottery.prize == lottery.rotateRight[_this.index]) {
+        if (lottery.times > lottery.cycle + 20 && lottery.prize == lottery.rotateRight[_this.index]) {
             clearTimeout(lottery.timer);
             lottery.prize = -1;
             lottery.times = 0;
         } else {
             if (_this.times < lottery.cycle) {
                 // console.log(_this.index)
-                lottery.speed -= 40;
+                lottery.speed -= 50;
                 // clearTimeout(lottery.timer);
+            } else if (_this.times > lottery.cycle + 10) {
+                lottery.speed += 50;
             }
 
             if (lottery.speed < 40) {
                 lottery.speed = 40;
             };
+
+
+
         }
 
         return false;
