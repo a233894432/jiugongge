@@ -71,3 +71,28 @@
         }
     }
 }
+
+.m-headline {
+    width: 80%;
+    height: pxToRem(40);
+    margin: pxToRem(20) auto;
+}
+
+// m-lottery 
+.m-lottery {
+    width: 85%;
+    margin: pxToRem(20) auto 0;
+    .u-div {
+        text-align: center;
+        height: pxToRem(100);
+        line-height: pxToRem(100);
+        border: 1px solid #ddd;
+    }
+    .active {
+        border: 1px solid red;
+    }
+    .u-doBtn {
+        background: url('doBotn@2x.png') center no-repeat;
+        background-size: 90% 96%;
+    }
+}

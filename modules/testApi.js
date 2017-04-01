@@ -112,16 +112,101 @@ var apidata = {
     userInfo: { //获取微信用户信息
         url: "cloud2.member.api/wx/userInfo.json",
         param: "code"
+    },
+    sudokuConfig: {
+        url: "cloud2.member.api/wx/sudokuConfig.json",
+        param: "code"
+    },
+    doLottery: {
+        url: "cloud2.member.api/wx/doLottery.json"
     }
 }
 
-mock.mock(/\/userInfo.json/ig, {
+//mock 初始化
+mock.setup({
+    timeout: '200-600'
+})
+mock.Random.string(5)
+mock.Random.color();
+
+/**
+ * @desc 扩展插件
+ */
+
+mock.Random.extend({
+    randomid: function(date) {
+        let eid = [32, 21, 12, 574, 554, 1112, 221, 12]
+        return this.pick(eid)
+    },
+    moreColor: function(date) {
+        let eid = ['c679f2', '79f2a3', 'f279b3', 'f2ea79', 'f28079', '79f2b3', '22f2a3', '69f2a3']
+        return this.pick(eid)
+    }
+})
+
+
+mock.mock(/\/userInfo.json?([^# ]*)/ig, {
     'name': {
         frist: 'ddd'
     },
     'regexp': /[a-z][A-Z][0-9]/
 })
+mock.mock(/\/sudokuConfig.json?([^# ]*)/ig, {
+    'list': [{
+            'id': 56,
+            'name': '@string("lower", 5)',
+            'img': mock.Random.image('120x110', '@moreColor', '+'),
+            'color': '@color()'
+        },
+        {
+            'id': 58,
+            'name': '@string("lower", 5)',
+            'img': mock.Random.image('120x110', '@moreColor', '+'),
+            'color': '@color()'
+        }, {
+            'id': 61,
+            'name': '@string("lower", 5)',
+            'img': mock.Random.image('120x110', '@moreColor', '+'),
+            'color': '@color()'
+        },
+        {
+            'id': 62,
+            'name': '@string("lower", 5)',
+            'img': mock.Random.image('120x110', '@moreColor', '+'),
+            'color': '@color()'
+        }, {
+            'id': 64,
+            'name': '@string("lower", 5)',
+            'img': mock.Random.image('120x110', '@moreColor', '+'),
+            'color': '@color()'
+        },
+        {
+            'id': 66,
+            'name': '@string("lower", 5)',
+            'img': mock.Random.image('120x110', '@moreColor', '+'),
+            'color': '@color()'
+        }, {
+            'id': 67,
+            'name': '@string("lower", 5)',
+            'img': mock.Random.image('120x110', '@moreColor', '+'),
+            'color': '@color()'
+        }, {
+            'id': 68,
+            'name': '@string("lower", 5)',
+            'img': mock.Random.image('120x110', '@moreColor', '+'),
+            'color': '@color()'
+        }
+    ]
+})
 
+
+mock.mock(/\/doLottery.json?([^# ]*)/ig, {
+    'msg': "成功",
+    'code': "200",
+    'data': {
+        'id|1': [56, 58, 61, 62, 64, 66, 67, 68]
+    }
+})
 
 
 

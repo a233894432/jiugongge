@@ -6,11 +6,11 @@ require(["vue", "common", "api", "dialog", "config", "testApi"], function(Vue, a
         DOC = document;
 
     tapi.userInfo(11).done(
-        data => {
-            console.log(data)
-        }
-    )
-    console.log(c)
+            data => {
+                console.log(data)
+            }
+        )
+        // console.log(c)
     let vm = new Vue({
         el: "#footer",
         data: {

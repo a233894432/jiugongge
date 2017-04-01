@@ -134,7 +134,7 @@ $.fn.Marquee = function(options) {
 
 
         // console.log($element)
-        console.log(opts)
+        // console.log(opts)
 
 
 
